@@ -1,16 +1,19 @@
-package leetcode.algorithm;
+package leetcode.algorithm.MergeStringsAlternately;
 
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class SolutionTest {
 
+    private Solution solution = new Solution();
+
     @Test
     public void testMergeAlternately() {
-        Solution solution = new Solution();
-
         assertEquals("apbqcr", solution.mergeAlternately("abc", "pqr"));
         assertEquals("apbqrs", solution.mergeAlternately("ab", "pqrs"));
         assertEquals("apbqcd", solution.mergeAlternately("abcd", "pq"));
     }
+
 }

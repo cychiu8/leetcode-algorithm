@@ -1,4 +1,4 @@
-package leetcode.algorithm;
+package leetcode.algorithm.MergeStringsAlternately;
 
 /*
  * 1768. Merge Strings Alternately
@@ -8,7 +8,7 @@ package leetcode.algorithm;
  * If a string is longer than the other, append the additional letters onto the end of the merged string.
  */
 
- class Solution {
+ public class Solution {
     public String mergeAlternately(String word1, String word2) {
         // pointer to keep track of the current index of the first string
         int curInxInWord = 0;
