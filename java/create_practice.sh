@@ -22,7 +22,7 @@ echo "solution folder created successfully"
 # create a solution java class
 echo "Creating solution java class..."
 # the basic template for the solution
-echo "import leetcode.algorithm.$PROBLEM_NAME;
+echo "package leetcode.algorithm.$PROBLEM_NAME;
 
 public class Solution {
     public String $PROBLEM_NAME(){
@@ -43,17 +43,18 @@ echo "test folder created successfully"
 # create a test file for the problem
 echo "Creating test java class..."
 # the basic template for the test
-echo "import leetcode.algorithm.$PROBLEM_NAME;
+echo "package leetcode.algorithm.$PROBLEM_NAME;
 
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class SolutionTest {
+
     private Solution solution= new Solution();
 
     @Test
-    public void test$PROBLEM_NAME(){
-     
+    public void testAlgorithm(){
+        assertEquals();
     }
 }" > $DIRECTORY/SolutionTest.java
 
