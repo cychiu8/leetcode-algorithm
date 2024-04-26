@@ -19,13 +19,16 @@ if [ ! -d "$DIRECTORY" ]; then
 fi
 echo "solution folder created successfully"
 
+FIRST_LETTER=$(echo ${PROBLEM_NAME:0:1}| tr '[:upper:]' '[:lower:]')
+REST_OF_NAME=${PROBLEM_NAME:1}
+
 # create a solution java class
 echo "Creating solution java class..."
 # the basic template for the solution
 echo "package leetcode.algorithm.$PROBLEM_NAME;
 
 public class Solution {
-    public String $PROBLEM_NAME(){
+    public String $FIRST_LETTER$REST_OF_NAME(){
 
     }
 }" > $DIRECTORY/Solution.java
