@@ -1,7 +1,7 @@
 package leetcode.algorithm.ReverseWordsInAString;
 
 
-public class NavieSolution extends Solution {
+public class BasicSolution extends Solution {
 
     @Override
     public String reverseWordsInAString(String s){

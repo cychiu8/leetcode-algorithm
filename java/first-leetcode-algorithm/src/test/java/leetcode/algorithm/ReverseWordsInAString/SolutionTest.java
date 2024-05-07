@@ -9,7 +9,7 @@ import java.util.stream.Stream;
 public class SolutionTest {
 
     static Stream<Solution> solutions() {
-        return Stream.of(new NavieSolution(), new OtherSolution());
+        return Stream.of(new BasicSolution(), new OtherSolution());
     }
 
     @ParameterizedTest

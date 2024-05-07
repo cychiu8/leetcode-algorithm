@@ -27,11 +27,20 @@ echo "Creating solution java class..."
 # the basic template for the solution
 echo "package leetcode.algorithm.$PROBLEM_NAME;
 
-public class Solution {
+public abstract class Solution {
+    public String $FIRST_LETTER$REST_OF_NAME();
+
+}" > $DIRECTORY/Solution.java
+
+echo "package leetcode.algorithm.$PROBLEM_NAME;
+
+public class BasicSolution extends Solution {
+    @Override
     public String $FIRST_LETTER$REST_OF_NAME(){
 
     }
-}" > $DIRECTORY/Solution.java
+
+}" > $DIRECTORY/BasicSolution.java
 
 echo "solution class created successfully"
 
@@ -52,15 +61,19 @@ echo "Creating test java class..."
 # the basic template for the test
 echo "package leetcode.algorithm.$PROBLEM_NAME;
 
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class SolutionTest {
 
-    private Solution solution= new Solution();
+    static Stream<Solution> solutions() {
+        return Stream.of(new BasicSolution());
+    }
 
-    @Test
-    public void testAlgorithm(){
+    @ParameterizedTest
+    @MethodSource("solutions")
+    public void testAlgorithm(Solution solution){
         assertEquals();
     }
 }" > $DIRECTORY/SolutionTest.java
