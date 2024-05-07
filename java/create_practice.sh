@@ -35,6 +35,10 @@ public class Solution {
 
 echo "solution class created successfully"
 
+# create a note for the solution
+echo "Creating note for the solution..."
+echo "# $PROBLEM_NAME" > $DIRECTORY/Note.md
+
 # create a test folder for the problem
 echo "Creating test folder for $PROBLEM_NAME..."
 DIRECTORY="./first-leetcode-algorithm/src/test/java/leetcode/algorithm/$PROBLEM_NAME/"
