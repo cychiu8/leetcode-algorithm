@@ -11,6 +11,7 @@ fi
 
 # create a solution folder for the problem
 PROBLEM_NAME="$1"
+PROBLEM_NUM="$2"
 
 echo "Creating solution folder for $PROBLEM_NAME..."
 DIRECTORY="./first-leetcode-algorithm/src/main/java/leetcode/algorithm/$PROBLEM_NAME/"
@@ -27,8 +28,12 @@ echo "Creating solution java class..."
 # the basic template for the solution
 echo "package leetcode.algorithm.$PROBLEM_NAME;
 
+/*
+ * $PROBLEM_NUM. $PROBLEM_NAME
+ */
+
 public abstract class Solution {
-    public String $FIRST_LETTER$REST_OF_NAME();
+    public abstarct String $FIRST_LETTER$REST_OF_NAME();
 
 }" > $DIRECTORY/Solution.java
 
@@ -46,7 +51,7 @@ echo "solution class created successfully"
 
 # create a note for the solution
 echo "Creating note for the solution..."
-echo "# $PROBLEM_NAME" > $DIRECTORY/Note.md
+echo "# $PROBELM_NUM. $PROBLEM_NAME" > $DIRECTORY/Note.md
 
 # create a test folder for the problem
 echo "Creating test folder for $PROBLEM_NAME..."
@@ -65,6 +70,8 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.MethodSource;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+import java.util.stream.Stream;
+
 public class SolutionTest {
 
     static Stream<Solution> solutions() {
@@ -72,7 +79,7 @@ public class SolutionTest {
     }
 
     @ParameterizedTest
-    @MethodSource("solutions")
+    @MethodSource(\"solutions\")
     public void testAlgorithm(Solution solution){
         assertEquals();
     }
