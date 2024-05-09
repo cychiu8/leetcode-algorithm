@@ -33,7 +33,7 @@ echo "package leetcode.algorithm.$PROBLEM_NAME;
  */
 
 public abstract class Solution {
-    public abstarct String $FIRST_LETTER$REST_OF_NAME();
+    public abstract String $FIRST_LETTER$REST_OF_NAME();
 
 }" > $DIRECTORY/Solution.java
 
@@ -51,7 +51,7 @@ echo "solution class created successfully"
 
 # create a note for the solution
 echo "Creating note for the solution..."
-echo "# $PROBELM_NUM. $PROBLEM_NAME" > $DIRECTORY/Note.md
+echo "# $PROBLEM_NUM. $PROBLEM_NAME" > $DIRECTORY/Note.md
 
 # create a test folder for the problem
 echo "Creating test folder for $PROBLEM_NAME..."
