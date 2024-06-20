@@ -3,7 +3,9 @@ package leetcode.algorithm.DetermineIfTwoStringsAreClose;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.MethodSource;
 import static org.junit.jupiter.api.Assertions.assertEquals;
-
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 import java.util.stream.Stream;
 
 public class SolutionTest {
@@ -17,7 +19,7 @@ public class SolutionTest {
     public void testAlgorithmTrueWithR1(Solution solution) {
         String word1 = "abc";
         String word2 = "bca";
-        assertEquals(true, solution.determineIfTwoStringsAreClose(word1, word2));
+        assertTrue(solution.determineIfTwoStringsAreClose(word1, word2));
     }
 
     @ParameterizedTest
@@ -25,7 +27,7 @@ public class SolutionTest {
     public void testAlgorithmTrueWithMixedRule(Solution solution) {
         String word1 = "cabbba";
         String word2 = "abbccc";
-        assertEquals(true, solution.determineIfTwoStringsAreClose(word1, word2));
+        assertTrue(solution.determineIfTwoStringsAreClose(word1, word2));
     }
 
     @ParameterizedTest
@@ -33,7 +35,7 @@ public class SolutionTest {
     public void testAlgorithmFalse(Solution solution) {
         String word1 = "a";
         String word2 = "aa";
-        assertEquals(false, solution.determineIfTwoStringsAreClose(word1, word2));
+        assertFalse(solution.determineIfTwoStringsAreClose(word1, word2));
     }
 
     @ParameterizedTest
@@ -41,7 +43,7 @@ public class SolutionTest {
     public void testAlgorithmFalseWithDiffOcc(Solution solution) {
         String word1 = "cabbba";
         String word2 = "aabbss";
-        assertEquals(false, solution.determineIfTwoStringsAreClose(word1, word2));
+        assertFalse(solution.determineIfTwoStringsAreClose(word1, word2));
     }
 
     @ParameterizedTest
@@ -49,7 +51,7 @@ public class SolutionTest {
     public void testAlgorithmFalseWithDiffChar(Solution solution) {
         String word1 = "uau";
         String word2 = "ssx";
-        assertEquals(false, solution.determineIfTwoStringsAreClose(word1, word2));
+        assertFalse(solution.determineIfTwoStringsAreClose(word1, word2));
     }
 
     @ParameterizedTest
@@ -57,7 +59,7 @@ public class SolutionTest {
     public void testAlgorithmFalseWithDiff(Solution solution) {
         String word1 = "aaabbbbccddeeeeefffff";
         String word2 = "aaaaabbcccdddeeeeffff";
-        assertEquals(false, solution.determineIfTwoStringsAreClose(word1, word2));
+        assertFalse(solution.determineIfTwoStringsAreClose(word1, word2));
     }
 
 }

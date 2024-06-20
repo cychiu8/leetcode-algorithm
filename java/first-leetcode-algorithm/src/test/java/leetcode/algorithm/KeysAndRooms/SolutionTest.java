@@ -3,6 +3,8 @@ package leetcode.algorithm.KeysAndRooms;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.MethodSource;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -23,7 +25,7 @@ public class SolutionTest {
         rooms.add(Arrays.asList(3));
         rooms.add(Arrays.asList());
 
-        assertEquals(true, solution.keysAndRooms(rooms));
+        assertTrue(solution.keysAndRooms(rooms));
     }
 
     @ParameterizedTest
@@ -35,6 +37,6 @@ public class SolutionTest {
         rooms.add(Arrays.asList(2));
         rooms.add(Arrays.asList(0));
 
-        assertEquals(false, solution.keysAndRooms(rooms));
+        assertFalse(solution.keysAndRooms(rooms));
     }
 }

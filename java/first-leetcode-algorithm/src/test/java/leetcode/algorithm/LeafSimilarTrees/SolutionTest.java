@@ -3,7 +3,8 @@ package leetcode.algorithm.LeafSimilarTrees;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.MethodSource;
 import static org.junit.jupiter.api.Assertions.assertEquals;
-
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 import java.util.stream.Stream;
 
 public class SolutionTest {
@@ -38,7 +39,7 @@ public class SolutionTest {
         TreeNode root1 = createTreeFromArray(arr1);
         TreeNode root2 = createTreeFromArray(arr2);
 
-        assertEquals(true, solution.leafSimilarTrees(root1, root2));
+        assertTrue(solution.leafSimilarTrees(root1, root2));
     }
 
     @ParameterizedTest
@@ -50,6 +51,6 @@ public class SolutionTest {
         TreeNode root1 = createTreeFromArray(arr1);
         TreeNode root2 = createTreeFromArray(arr2);
 
-        assertEquals(false, solution.leafSimilarTrees(root1, root2));
+        assertFalse(solution.leafSimilarTrees(root1, root2));
     }
 }
