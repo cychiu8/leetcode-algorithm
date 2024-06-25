@@ -40,10 +40,6 @@ public abstract class Solution {
 echo "package leetcode.algorithm.$PROBLEM_NAME;
 
 public class BasicSolution extends Solution {
-    @Override
-    public String $FIRST_LETTER$REST_OF_NAME(){
-
-    }
 
 }" > $DIRECTORY/BasicSolution.java
 
@@ -71,6 +67,10 @@ import org.junit.jupiter.params.provider.MethodSource;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.util.stream.Stream;
+
+/*
+ * $PROBLEM_NUM. $PROBLEM_NAME
+ */
 
 public class SolutionTest {
 
